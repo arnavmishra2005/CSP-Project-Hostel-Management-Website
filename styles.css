@@ -1,0 +1,31 @@
+/* styles.css */
+
+/* Example of custom CSS: You can add more styles as needed */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-brand {
+    color: #007bff !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #007bff;
+  }
+  
+  .navbar-toggler {
+    border-color: #007bff;
+  }
+  
+  .form-control {
+    width: 200px;
+  }
+  
