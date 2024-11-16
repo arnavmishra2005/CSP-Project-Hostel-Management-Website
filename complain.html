@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Complaint Box</h1>
+    </header>
+    <main>
+        <section class="complaint-box">
+            <h2>Submit Your Complaint</h2>
+            <form id="complaintForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="room">Room Number:</label>
+                <input type="text" id="room" name="room" required>
+                
+                <label for="complaint">Complaint:</label>
+                <textarea id="complaint" name="complaint" required></textarea>
+                
+                <button type="submit">Submit Complaint</button>
+            </form>
+            <section id="complaintList">
+                <h2>Stored Complaints</h2>
+                <ul id="complaints">
+                    <!-- List of complaints will be displayed here -->
+                </ul>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Complaint Box</p>
+    </footer>
+    <script src="complain.js"></script>
+</body>
+</html>
