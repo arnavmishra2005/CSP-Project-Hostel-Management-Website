@@ -5,6 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcement</title>
     <link rel="stylesheet" href="admin_styles.css">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .logo h1 {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .user-actions {
+            float: right;
+        }
+
+        .announcement-container {
+            margin: 20px;
+        }
+
+        .announcement {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            display: none; /* Initially hidden */
+        }
+
+        .announcement.show {
+            display: block; /* Show the announcement */
+        }
+
+        .announcement h3 {
+            margin: 0;
+            color: #4CAF50;
+        }
+
+        .announcement p {
+            font-size: 16px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,10 +106,65 @@
             <button id="signOutButton" class="sign-out-button">Sign Out</button>
         </div>
     </header>
+
     <main>
         <h2>Announcements</h2>
         <p>Updates and announcements for hostel residents.</p>
+
+        <div id="announcement1" class="announcement">
+            <h3>Upcoming Hostel Maintenance</h3>
+            <p><strong>Date:</strong> November 20, 2024</p>
+            <p>The hostel maintenance will take place from 9 AM to 5 PM on November 20. During this time, there may be temporary interruptions in water supply. Please plan accordingly.</p>
+        </div>
+
+        <div id="announcement2" class="announcement">
+            <h3>New In-Room Facilities</h3>
+            <p><strong>Date:</strong> November 10, 2024</p>
+            <p>We are excited to announce that new in-room facilities are now available for residents, including upgraded Wi-Fi and air conditioning in all rooms. Enjoy your stay with added comfort!</p>
+        </div>
+
+        <div id="announcement3" class="announcement">
+            <h3>Hostel Dining Hours</h3>
+            <p><strong>Date:</strong> November 5, 2024</p>
+            <p>Please be informed that the dining hall will be closed from 2 PM to 4 PM on weekdays for regular cleaning and maintenance. Please plan your meals accordingly.</p>
+        </div>
+
+        <div id="announcement4" class="announcement">
+            <h3>New Visitors Policy</h3>
+            <p><strong>Date:</strong> October 30, 2024</p>
+            <p>We are implementing a new visitors policy starting from November 1, 2024. All visitors must be registered at the front desk and can only visit between 10 AM and 6 PM. Please read the full policy on the hostel website.</p>
+        </div>
+        
     </main>
-    <script src="admin_script.js"></script>
+    <script>
+        // Function to show and hide announcements
+        function toggleAnnouncement(announcementId) {
+            const announcement = document.getElementById(announcementId);
+            if (announcement.classList.contains('show')) {
+                announcement.classList.remove('show');
+            } else {
+                announcement.classList.add('show');
+            }
+        }
+    
+        // Automatically show announcements every 1 second
+        window.onload = () => {
+            let announcements = [
+                'announcement1',
+                'announcement2',
+                'announcement3',
+                'announcement4'
+            ];
+    
+            let index = 0;
+    
+            setInterval(() => {
+                toggleAnnouncement(announcements[index]);
+                index = (index + 1) % announcements.length; // Loop through announcements
+            }, 1000); // Change every 1 second
+        };
+    </script>
+    
+    
 </body>
 </html>
