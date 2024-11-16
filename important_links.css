@@ -1,12 +1,71 @@
-/* General Styles */
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  /* Header Styles */
-  header {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    
+}
+
+/* Section Headings */
+h2 {
+    color: #4CAF50;
+    margin-top: 20px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: 30px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+  align-items: center;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +90,6 @@ body {
     margin: 0;
     padding: 0;
   }
-  
   nav ul li {
     margin: 0 10px;
   }
@@ -49,8 +107,6 @@ body {
   .contact {
     font-size: 14px;
   }
-  
-  /* Hero Section Styles */
   .hero {
     position: relative;
     text-align: center;
@@ -72,20 +128,7 @@ body {
     border-radius: 5px;
     font-size: 18px;
   }
-  
-  /* Footer Styles */
-  footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-  /* Sign Out Button Styles */
-.user-actions {
+  .user-actions {
     margin-left: auto;
   }
   
