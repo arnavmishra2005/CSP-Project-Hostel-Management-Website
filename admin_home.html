@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KANHAR HOSTAL IIT BHILAI</title>
+    <title>KANHAR HOSTEL IIT BHILAI</title>
     <link rel="stylesheet" href="admin_styles.css">
     <link rel="stylesheet" href="announcement_styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    .announcement {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        font-size: 2rem; /* Increased font size */
+        font-weight: bold;
+        color: #333;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+</style>
+
 </head>
 
 <body>
@@ -30,20 +66,23 @@
         </div>
 
         <div class="user-actions">
-            <button id="signOutButton" class="sign-out-button">Sign Out</button>
+            <button id="signOutButton" class="sign-out-button" onclick="redirectToHome()">Sign Out</button>
         </div>
+        
     </header>
 
     <main>
         <section class="hero">
             <img src="mm.png.jpg" alt="Students in front of university building">
+            <div class="announcement" id="announcementContainer"></div>
         </section>
     </main>
 
     <footer>
         <p>&copy; Kanhar Hostel - All rights reserved</p>
     </footer>
-
+<h1>
     <script src="admin_home.js"></script>
+    </h1>
 </body>
 </html>
