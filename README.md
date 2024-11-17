@@ -6,12 +6,4 @@ This is the CSP Project for Hostel Management.
 <br> To run the webpage, first open the index.html file. After logging in with Google, you will be redirected to admin_home.html, where the hostel management system begins.
 <br> The website includes seven key features:
 
-Announcement section
-Complaint box
-In-room facilities
-Hostel facilities
-Location
-Home
-Important links <br>
-The authors of this project are ARNAV MISHRA, AYUSH KHELWAL, and NAMAN SHARMA.
-<br>
+<ul> <li>Announcement section</li> <li>Complaint box</li> <li>In-room facilities</li> <li>Hostel facilities</li> <li>Location</li> <li>Home</li> <li>Important links</li> </ul> <br> The authors of this project are ARNAV MISHRA, AYUSH KHELWAL, and NAMAN SHARMA. <br>
