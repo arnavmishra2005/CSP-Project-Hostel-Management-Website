@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complaint Box</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin_styles.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="icon.jpg" alt="IIT-Bhilai">
-            <h2>KANHAR Hostel       </h2>
+            <h2>KANHAR Hostel</h2>
         </div>
-        
         <div>
-        <nav>
-            <ul>
-                <li><a href="admin_home.html">Home</a></li>
-                <li><a href="hostel_facility.html">Hostel Facility</a></li>
-                <li><a href="inroom_facility.html">In-Room Facilities</a></li>
-                <li><a href="announcement.html">Announcement</a></li>
-                <li><a href="Important_links.html">Important Link</a></li>
-                <li><a href="location.html">Location</a></li>
-                <li><a href="complain.html">Complain_box</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="admin_home.html">Home</a></li>
+                    <li><a href="hostel_facility.html">Hostel Facility</a></li>
+                    <li><a href="inroom_facility.html">In-Room Facilities</a></li>
+                    <li><a href="announcement.html">Announcement</a></li>
+                    <li><a href="important_links.html">Important Links</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="complain.html">Complain Box</a></li>
+                </ul>
+            </nav>
         </div>
-
         <div class="user-actions">
             <button id="signOutButton" class="sign-out-button">Sign Out</button>
         </div>
@@ -40,25 +38,20 @@
             <form id="complaintForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-                
                 <label for="room">Room Number:</label>
                 <input type="text" id="room" name="room" required>
-                
                 <label for="complaint">Complaint:</label>
                 <textarea id="complaint" name="complaint" required></textarea>
-                
                 <button type="submit">Submit Complaint</button>
             </form>
             <section id="complaintList">
                 <h2>Stored Complaints</h2>
-                <ul id="complaints">
-                    <!-- List of complaints will be displayed here -->
-                </ul>
+                <ul id="complaints"></ul>
             </section>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Kanhar Hostel - All rights reserved</p>
+        <p>&copy; Kanhar Hostel - All rights reserved</p>
     </footer>
     <script src="complain.js"></script>
 </body>

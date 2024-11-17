@@ -102,4 +102,29 @@ body {
   .sign-out-button:hover {
     background-color: #e60000;
   }
-  
+  .remove-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-button:hover {
+    background-color: darkred;
+}
+
+#complaintForm {
+    margin-bottom: 20px;
+}
+
+#complaints {
+    list-style: none;
+    padding: 0;
+}
+
+#complaints li {
+    margin-bottom: 10px;
+}
