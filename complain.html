@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complaint Box</title>
+    <link rel="icon" href="android-chrome-192x192.png" type="image/png">
+    <link rel="stylesheet" href="admin_styles.css">
     <link rel="stylesheet" href="admin_styles.css">
 </head>
 <body>
@@ -12,47 +14,47 @@
             <img src="icon.jpg" alt="IIT-Bhilai">
             <h2>KANHAR Hostel</h2>
         </div>
+        
         <div>
-            <nav>
-                <ul>
-                    <li><a href="admin_home.html">Home</a></li>
-                    <li><a href="hostel_facility.html">Hostel Facility</a></li>
-                    <li><a href="inroom_facility.html">In-Room Facilities</a></li>
-                    <li><a href="announcement.html">Announcement</a></li>
-                    <li><a href="important_links.html">Important Links</a></li>
-                    <li><a href="location.html">Location</a></li>
-                    <li><a href="complain.html">Complain Box</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="admin_home.html">Home</a></li>
+                <li><a href="hostel_facility.html">Hostel Facility</a></li>
+                <li><a href="inroom_facility.html">In-Room Facilities</a></li>
+                <li><a href="announcement.html">Announcement</a></li>
+                <li><a href="Important_links.html">Important Links</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="complain.html">Complaint Box</a></li>
+            </ul>
+        </nav>
         </div>
+
         <div class="user-actions">
-            <button id="signOutButton" class="sign-out-button">Sign Out</button>
+            <button id="signOutButton" class="sign-out-button" onclick="redirectToHome()">Sign Out</button>
         </div>
     </header>
-    <header>
-        <h1>Complaint Box</h1>
-    </header>
-    <main>
-        <section class="complaint-box">
-            <h2>Submit Your Complaint</h2>
-            <form id="complaintForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="room">Room Number:</label>
-                <input type="text" id="room" name="room" required>
-                <label for="complaint">Complaint:</label>
-                <textarea id="complaint" name="complaint" required></textarea>
-                <button type="submit">Submit Complaint</button>
-            </form>
-            <section id="complaintList">
-                <h2>Stored Complaints</h2>
-                <ul id="complaints"></ul>
-            </section>
-        </section>
-    </main>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Submit Complaint</h2>
+            </div>
+            <input type="hidden" name="access_key" value="baf71b53-ba74-4275-80f6-86a2153cacc2">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <input type="text" name="phone" placeholder="Your Phone Number" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="contact-right">
+            <img src="" alt="">
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <p>&copy; Kanhar Hostel - All rights reserved</p>
     </footer>
-    <script src="complain.js"></script>
+    
 </body>
+<script src="admin_home.js"></script>
 </html>
