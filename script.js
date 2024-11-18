@@ -1,4 +1,3 @@
-// Fetch user data and validate login
 document.getElementById('loginForm').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -7,11 +6,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     const errorMessage = document.getElementById('error-message');
 
     try {
-        // Fetch user data from JSON file
         const response = await fetch('users.json');
         const users = await response.json();
 
-        // Check credentials
         const user = users.find(user => user.username === username && user.password === password);
 
         if (!user) {
@@ -21,11 +18,10 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             errorMessage.style.display = 'none';
             alert(`Login successful! Welcome, ${user.role}.`);
 
-            // Redirect based on role
             if (user.role === 'administrator') {
-                window.location.href = 'admin_home.html'; // Redirect to admin home page
+                window.location.href = 'admin_home.html';
             } else if (user.role === 'student') {
-                window.location.href = 'student_home.html'; // Redirect to student home page
+                window.location.href = 'student_home.html';
             }
             
         }

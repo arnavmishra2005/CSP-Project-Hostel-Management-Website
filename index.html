@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login with Google</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -82,7 +81,6 @@
     </div>
 
     <script type="module">
-        // Import Firebase modules
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { 
             getAuth, 
@@ -90,7 +88,6 @@
             GoogleAuthProvider 
         } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
-        // Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCa8qPOBGcSLa_ouZkVp_-uRcWGHo3QQi4",
             authDomain: "hostelmanagement-4c7f6.firebaseapp.com",
@@ -100,30 +97,25 @@
             appId: "1:312145776922:web:657b49349ffd90c8c49ca3"
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const googleProvider = new GoogleAuthProvider();
 
-        // Customize Google sign-in prompt
         googleProvider.setCustomParameters({
-            prompt: 'select_account' // Ensures account selection dialog always appears
+            prompt: 'select_account'
         });
 
-        // Function for Google Sign-In
         window.signInWithGoogle = async () => {
             try {
                 const result = await signInWithPopup(auth, googleProvider);
                 const user = result.user;
 
-                // Success: Display user info or redirect
                 console.log('Google sign-in successful:', user);
                 alert(`Welcome, ${user.displayName}!`);
-                window.location.href = 'admin_home.html'; // Redirect to home page after successful login
+                window.location.href = 'admin_home.html';
             } catch (error) {
                 console.error('Google sign-in error:', error);
 
-                // Handle errors
                 switch (error.code) {
                     case 'auth/popup-blocked':
                         alert('Please enable popups for this website and try again.');
